@@ -1,19 +1,19 @@
 # Smart-JS-Music-Player-App
 
 ## Features of this website :
-? Play and pause a song.
+> Play and pause a song.
 
-? Play the next or previous song and loop, repeat or shuffle a song.
+> Play the next or previous song and loop, repeat or shuffle a song.
 
-? You can view your songs list. 
+> You can view your songs list. 
 
-? You’ll also select the song from the list to play.
+> You’ll also select the song from the list to play.
 
-? Smart App Design Using Html5, Css3 and JavaScript.
+> Smart App Design Using Html5, Css3 and JavaScript.
 
 ### By: SabryHosny.
 #### See live link:
-https://sabryhosny.github.io/Complete-Responsive-E-commerce-Website/
+https://sabryhosny.github.io/Smart-JS-Music-Player-App/
 
 ![Complete Responsive Ecommerce Website](/preview.png)
 
