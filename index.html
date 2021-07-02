@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Music Player | SabryHosny</title>
+
+  <!-- CSS File -->
+  <link rel="stylesheet" href="css/style.css">
+  <!-- Google Icons -->
+  <!-- <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"> -->
+  <!------------------ UNICONS ------------------->
+  <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+
+</head>
+
+<body>
+  <div class="app_container">
+    <!--========================== TOP SECTION ===========================-->
+    <div class="top section">
+      <i class="uil uil-heart-alt top_icon"></i>
+      <span class="top_text">Sabry<span>Hosny</span></span>
+      <i class="uil uil-plus top_icon"></i>
+    </div>
+
+    <!--========================== DETAILS SECTION ===========================-->
+    <div class="details section">
+      <div class="details_img_mask">
+        <img src="images/music-1.jpg" alt="" class="details_img">
+      </div>
+
+      <div class="details_data">
+        <h3 class="song_name">Harley Bird - <span class="song_album">Home</span></h3>
+        <span class="songer">Jordan Score</span>
+      </div>
+
+      <div class="prog_bar">
+        <div class="bar_progress" style="width: 0%;" data-progress="0%"></div>
+        <span class="time_now">0:00</span>
+        <span class="time_length">0:00</span>
+        <audio class="audio_playing" src="" data-repeat="loop"></audio>
+      </div>
+    </div>
+
+    <!--========================== CONTROLS SECTION ===========================-->
+    <div class="controls secion">
+      <i class="uil uil-arrow-random shuffle_icon"></i>
+      <!-- <i class="uil uil-repeat shuffle_icon"></i> -->
+      <!-- <i class="uil uil-music-note shuffle_icon"></i> -->
+
+      <div class="div controls_btns">
+        <i class="uil uil-backward prev_icon"></i>
+
+        <i class="uil uil-pause pause_play_icon"></i>
+        <!-- <i class="uil uil-play pause_play_icon"></i> -->
+
+        <i class="uil uil-forward next_icon"></i>
+      </div>
+
+      <i class="uil uil-align list_icon"></i>
+
+    </div>
+
+    <!--========================== SONGS LIST SECTION ===========================-->
+    <div class="songs_list">
+      <div class="list_header">
+        <div class="title">
+          <i class="uil uil-align"></i>
+          <span>Music List</span>
+        </div>
+        <i class="uil uil-times close_icon"></i>
+      </div>
+      <ul class="list_content">
+        <!------------------ Song List Item ------------------->
+        <!-- <li class="active">
+          <div class="data">
+            <p class="item_song_name">Harley Bird - <span class="item_song_album">Home</span></p>
+            <span class="item_songer">Jordan Score</span>
+          </div>
+          <span class="song_length">1:45</span>
+        </li> -->
+      </ul>
+    </div>
+  </div>
+
+
+  <!-- JS File -->
+  <script src="js/music-list.js"></script>
+  <script src="js/script.js"></script>
+
+</body>
+
+</html>

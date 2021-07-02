@@ -1,0 +1,248 @@
+/*=========================== Google Fonts ===========================*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+/*=========================== Variables ===========================*/
+:root{
+  --color-red:	#c0392b;
+  --color-red_dark: #942114;
+  --color-orange: #f39c12;
+  --color-white: #ecf0f1;
+  --color-blue_dark: #2c3e50;
+  --color-blue: #465a6e;
+}
+
+/*=========================== Global Rules ===========================*/
+*,
+*::before,
+*::after{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  transition: .3s;
+}
+*::selection{
+  color: var(--color-red);
+}
+
+ul{
+  list-style: none;
+}
+
+body{
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  /* height: 100vh; */
+  background-color: var(--color-blue_dark);
+}
+
+i{
+  font-size: x-large;
+  cursor: pointer;
+}
+
+span{
+  display: inline-block;
+}
+/* #################################################################################### */
+.app_container{
+  margin: 0 auto;
+  margin-top: 5rem;
+  text-align: center;
+  width: 350px;
+  height: 650px;
+  padding: 25px 30px;
+  background: linear-gradient(var(--color-white) 0%, var(--color-orange) 90%);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, .75);
+  border-radius: 1rem;
+  position: relative;
+  overflow: hidden;
+}
+
+/*=========================== TOP SECTION ===========================*/
+.top{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.top_text{
+  color: var(--color-red);
+  font-size: small;
+  font-weight: 600;
+}
+.top_text span{
+  color: var(--color-blue_dark);
+}
+.top_icon{
+
+}
+
+/*=========================== DETAILS SECTION  ===========================*/
+.details{
+  padding-top: 1rem;
+}
+.details_img_mask{
+  height: 280px;
+  width: 100%;
+  border-radius: 50%;
+  border: 8px solid var(--color-red);
+  box-shadow:  8px 8px 20px rgba(0, 0, 0, .5),
+                -10px -10px 20px white;
+  position: relative;
+  overflow: hidden;
+}
+.details_img{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.details_data{
+  margin-top: 2rem;
+}
+.song_name{
+  margin-bottom: .5rem;
+  color: var(--color-blue_dark);
+}
+.song_album{
+  color: var(--color-red);
+}
+.songer{
+  margin-bottom: 3.5rem;
+}
+
+.prog_bar{
+  width: 100%;
+  height: 5px;
+  background-color: #ecf0f1;
+  border-radius: 5px;
+  position: relative;
+}
+.bar_progress{
+  background-color: var(--color-red);
+  border-radius: 5px;
+  height: 100%;
+  position: relative;
+}
+.bar_progress::before{
+  content: attr(data-progress);
+  position: absolute;
+  right: 0;
+  top: -18px;
+  font-size: x-small;
+  color: var(--color-red);
+  font-weight: bold;
+}
+.time_now,
+.time_length{
+  position: absolute;
+  top: 8px;
+}
+.time_now{
+  left: 0;
+}
+.time_length{
+  right: 0;
+}
+
+/*=========================== CONTROLS ===========================*/
+.controls{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 4.2rem;
+}
+.controls_btns{
+  display: flex;
+
+  align-content: center;
+  align-items: center;
+}
+.controls_btns i{
+  padding: 0 .75rem;
+}
+.pause_play_icon{
+  color: var(--color-red);
+  font-size: 2rem;
+}
+.prev_icon,
+.next_icon{
+color: var(--color-blue_dark);
+}
+
+/*=========================== SONGS LIST SECTION  ===========================*/
+.songs_list{
+  position: absolute;
+  width: 100%;
+  bottom: -100%;
+  left: 0;
+  text-align: left;
+  /* padding: 25px 30px; */
+  background: 
+  linear-gradient(var(--color-white), transparent),
+  linear-gradient(to top left,  var(--color-orange), transparent),
+  linear-gradient(to top right,  var(--color-white), transparent);
+  box-shadow: 0 -5px 10px rgba(0, 0, 0, .2);
+  border-radius: 1rem;
+  /* border: 1px solid var(--color-blue_dark); */
+  max-height: 50%;
+  overflow-y: auto;
+}
+.songs_list.show{
+  bottom: 0;
+}
+.songs_list::-webkit-scrollbar{
+width: 0;
+}
+.list_header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 1rem;
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color:var(--color-orange);
+  padding: .75rem 1.5rem;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, .5);
+}
+.list_header .title{
+  display: flex;
+  align-items: center;
+  column-gap: .5rem;
+  color: var(--color-blue_dark);
+  font-weight: bold;
+}
+.close_icon{
+  color: #2c3e50;
+}
+.list_content{
+  display: grid;
+  row-gap: 1rem;
+  padding: 1.5rem 2rem .75rem;
+}
+.list_content li{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  color: #222;
+}
+.list_content li:not(:last-child){
+  border-bottom: 1px solid var(--color-blue);
+}
+.list_content li:hover,
+.list_content li.active
+{
+  color: var(--color-red_dark);
+  /* font-weight: bold; */
+
+}
+.item_songer{
+  color: #465a6e;
+  font-size: small;
+}
